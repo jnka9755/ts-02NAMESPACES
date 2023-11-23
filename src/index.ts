@@ -1,10 +1,8 @@
-import { Hero as SuperHero } from "./classes/Hero";
-// import * as HeroClasses from "./classes/Hero";
-// import powers from "./data/powers";
+import { getPokemon } from "./generics/get-pokemon";
 
-
-const spiderman = new SuperHero('Spiderman', 1, 40);
-// const spiderman = new HeroClasses.Hero('Spiderman', 10, 40);
-
-console.log(spiderman);
-console.log(spiderman.power);
+getPokemon(4)
+    .then( pokemon =>{
+        console.log(pokemon.name);
+    })
+    .catch( error => console.error( error ))
+    .finally(() => console.log('Fin de get Pokemon'));
